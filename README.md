@@ -48,6 +48,8 @@ Two buttons appear above every crafting table:
 
 This is especially useful when you need to buy everything to craft all items in a list at once.
 
+<img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/d44819c9-e6bf-40a6-ab66-68b5ec8c195a" />
+
 ### Real item names via XML API
 
 Reagent icons on WoWHead tables have no visible text. The extension resolves real item names (with proper accents and apostrophes) by calling WoWHead's XML endpoint (`/item=ID&xml`). Names are cached in memory so each item is only fetched once per session.
