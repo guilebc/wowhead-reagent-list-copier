@@ -4,6 +4,8 @@ A lightweight Chrome extension that adds copy buttons to crafting tables on [WoW
 
 No more tedious manual copying — hover, click, paste.
 
+![WoWHead Copier preview](https://github.com/user-attachments/assets/d44819c9-e6bf-40a6-ab66-68b5ec8c195a)
+
 ## Features
 
 ### Per-row copy buttons (visible on hover)
@@ -37,7 +39,7 @@ Two buttons appear above every crafting table:
 **Example output (total reagents):**
 
 ```
-=== Total des composants ===
+=== Total reagents ===
 465x Bois de Vent-froid
 34x Barre d'acier-titan
 20x Barre de titane
@@ -48,8 +50,6 @@ Two buttons appear above every crafting table:
 
 This is especially useful when you need to buy everything to craft all items in a list at once.
 
-<img width="1031" height="611" alt="image" src="https://github.com/user-attachments/assets/d44819c9-e6bf-40a6-ab66-68b5ec8c195a" />
-
 ### Real item names via XML API
 
 Reagent icons on WoWHead tables have no visible text. The extension resolves real item names (with proper accents and apostrophes) by calling WoWHead's XML endpoint (`/item=ID&xml`). Names are cached in memory so each item is only fetched once per session.
@@ -57,6 +57,22 @@ Reagent icons on WoWHead tables have no visible text. The extension resolves rea
 ### Dynamic content support
 
 WoWHead loads tab content (like "Reagent for", "Created by", etc.) dynamically via JavaScript. The extension uses a `MutationObserver` to detect new tables as they appear and automatically injects copy buttons.
+
+### Localization
+
+All buttons and labels are translated to match your browser language. Supported languages:
+
+| Language | Locale |
+|----------|--------|
+| English | `en` (default) |
+| Français | `fr` |
+| Deutsch | `de` |
+| Español | `es` |
+| Italiano | `it` |
+| Português | `pt_BR` |
+| Русский | `ru` |
+| 한국어 | `ko` |
+| 中文 | `zh_CN` |
 
 ## Installation
 
@@ -92,11 +108,21 @@ WoWHead loads tab content (like "Reagent for", "Created by", etc.) dynamically v
 
 ```
 wowhead-copier/
-├── manifest.json    # Extension manifest (permissions, content scripts)
-├── content.js       # Main logic (DOM parsing, XML API, copy buttons)
-├── styles.css       # Button and toast notification styles
-├── icon48.png       # Extension icon (48px)
-└── icon128.png      # Extension icon (128px)
+├── manifest.json        # Extension manifest (permissions, content scripts, i18n)
+├── content.js           # Main logic (DOM parsing, XML API, copy buttons)
+├── styles.css           # Button and toast notification styles
+├── icon48.png           # Extension icon (48px)
+├── icon128.png          # Extension icon (128px)
+└── _locales/            # Translations
+    ├── en/messages.json
+    ├── fr/messages.json
+    ├── de/messages.json
+    ├── es/messages.json
+    ├── it/messages.json
+    ├── pt_BR/messages.json
+    ├── ru/messages.json
+    ├── ko/messages.json
+    └── zh_CN/messages.json
 ```
 
 ## How it works
