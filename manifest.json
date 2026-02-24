@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "WoWHead Copier",
+  "version": "1.0.0",
+  "description": "Copier facilement les noms d'objets et compositions depuis WoWHead.com",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.wowhead.com/*",
+        "*://fr.wowhead.com/*",
+        "*://de.wowhead.com/*",
+        "*://es.wowhead.com/*",
+        "*://pt.wowhead.com/*",
+        "*://it.wowhead.com/*",
+        "*://ru.wowhead.com/*",
+        "*://ko.wowhead.com/*",
+        "*://cn.wowhead.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["clipboardWrite"],
+  "host_permissions": [
+    "*://www.wowhead.com/*",
+    "*://fr.wowhead.com/*",
+    "*://de.wowhead.com/*",
+    "*://es.wowhead.com/*",
+    "*://pt.wowhead.com/*",
+    "*://it.wowhead.com/*",
+    "*://ru.wowhead.com/*",
+    "*://ko.wowhead.com/*",
+    "*://cn.wowhead.com/*"
+  ]
+}
