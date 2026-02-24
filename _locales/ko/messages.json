@@ -1,0 +1,38 @@
+{
+  "extName": {
+    "message": "WoWHead Copier"
+  },
+  "extDescription": {
+    "message": "WoWHead.com 제작 테이블에서 아이템 이름, 재료 목록, 쇼핑 리스트를 쉽게 복사하세요."
+  },
+  "toastCopied": {
+    "message": "✓ 복사됨!"
+  },
+  "tipCopyName": {
+    "message": "이름 복사"
+  },
+  "tipCopyNameAndReagents": {
+    "message": "이름 + 재료 복사"
+  },
+  "tipCopyReagents": {
+    "message": "재료 복사"
+  },
+  "btnCopyFullList": {
+    "message": "📋 전체 목록 복사"
+  },
+  "tipCopyFullList": {
+    "message": "모든 아이템과 재료를 복사합니다"
+  },
+  "btnCopyTotalReagents": {
+    "message": "🧮 재료 합계 복사"
+  },
+  "tipCopyTotalReagents": {
+    "message": "전체 제작에 필요한 모든 재료를 합산합니다"
+  },
+  "loading": {
+    "message": "⏳ 로딩 중…"
+  },
+  "totalHeader": {
+    "message": "=== 재료 합계 ==="
+  }
+}

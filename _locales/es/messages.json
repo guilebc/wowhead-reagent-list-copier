@@ -1,0 +1,38 @@
+{
+  "extName": {
+    "message": "WoWHead Copier"
+  },
+  "extDescription": {
+    "message": "Copia fácilmente nombres de objetos, listas de componentes y listas de compras desde las tablas de fabricación de WoWHead.com."
+  },
+  "toastCopied": {
+    "message": "✓ ¡Copiado!"
+  },
+  "tipCopyName": {
+    "message": "Copiar nombre"
+  },
+  "tipCopyNameAndReagents": {
+    "message": "Copiar nombre + componentes"
+  },
+  "tipCopyReagents": {
+    "message": "Copiar componentes"
+  },
+  "btnCopyFullList": {
+    "message": "📋 Copiar toda la lista"
+  },
+  "tipCopyFullList": {
+    "message": "Copiar todos los objetos con sus componentes"
+  },
+  "btnCopyTotalReagents": {
+    "message": "🧮 Copiar total de componentes"
+  },
+  "tipCopyTotalReagents": {
+    "message": "Sumar todos los componentes necesarios para fabricar todo"
+  },
+  "loading": {
+    "message": "⏳ Cargando…"
+  },
+  "totalHeader": {
+    "message": "=== Total de componentes ==="
+  }
+}

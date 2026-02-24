@@ -18,6 +18,12 @@
 
   const PROCESSED = 'data-whc';
 
+  // ── i18n helper ────────────────────────────────────────────────────────
+  const msg = (key, fallback) => {
+    try { return chrome.i18n.getMessage(key) || fallback; }
+    catch { return fallback; }
+  };
+
   // ── Detect current locale from URL (fr, de, es, etc.) ──────────────────
   const localeMatch = location.pathname.match(/^\/(fr|de|es|pt|it|ru|ko|cn)\//);
   const locale = localeMatch ? localeMatch[1] : '';
@@ -104,7 +110,7 @@
       document.execCommand('copy');
       ta.remove();
     }
-    toast('✓ Copié !', btn);
+    toast(msg('toastCopied', '✓ Copied!'), btn);
   }
 
   // ── Build a small copy button ──────────────────────────────────────────
@@ -198,13 +204,13 @@
 
     // 1) Copy item name
     nameContainer.appendChild(
-      makeBtn('Copier le nom', btn => copy(itemName, btn))
+      makeBtn(msg('tipCopyName', 'Copy name'), btn => copy(itemName, btn))
     );
 
     if (reagents.length > 0) {
       // 2) Copy name + reagents
       nameContainer.appendChild(
-        makeBtn('Copier nom + composants', async btn => {
+        makeBtn(msg('tipCopyNameAndReagents', 'Copy name + reagents'), async btn => {
           const resolved = await resolveReagentNames(reagents);
           const text = itemName + '\n' + formatReagents(resolved, '  ');
           copy(text, btn);
@@ -213,7 +219,7 @@
 
       // 3) Copy reagents only (end of reagent cell)
       const reagentCell = cells[2];
-      const reagentBtn = makeBtn('Copier les composants', async btn => {
+      const reagentBtn = makeBtn(msg('tipCopyReagents', 'Copy reagents'), async btn => {
         const resolved = await resolveReagentNames(reagents);
         copy(formatReagents(resolved), btn);
       }, 'whc-copy-reagents');
@@ -255,14 +261,14 @@
     const bar = document.createElement('div');
     bar.className = 'whc-bulk-bar';
 
-    // ── Button 1: Copy all rows (existing) ───────────────────────────
+    // ── Button 1: Copy all rows ─────────────────────────────────────
     const btnList = document.createElement('button');
     btnList.className = 'whc-copy-btn whc-bulk-copy';
-    btnList.textContent = '📋 Copier toute la liste';
-    btnList.title = 'Copier tous les objets avec leurs composants';
+    btnList.textContent = msg('btnCopyFullList', '📋 Copy full list');
+    btnList.title = msg('tipCopyFullList', 'Copy all items with their reagents');
     btnList.addEventListener('click', async e => {
       e.preventDefault();
-      btnList.textContent = '⏳ Chargement…';
+      btnList.textContent = msg('loading', '⏳ Loading…');
       btnList.disabled = true;
 
       const rows = table.querySelectorAll('tr.listview-row');
@@ -283,19 +289,19 @@
         }
       }
 
-      btnList.textContent = '📋 Copier toute la liste';
+      btnList.textContent = msg('btnCopyFullList', '📋 Copy full list');
       btnList.disabled = false;
       if (blocks.length) copy(blocks.join('\n\n'), btnList);
     });
 
-    // ── Button 2: Copy total reagents (NEW) ──────────────────────────
+    // ── Button 2: Copy total reagents ────────────────────────────────
     const btnTotal = document.createElement('button');
     btnTotal.className = 'whc-copy-btn whc-bulk-copy whc-bulk-total';
-    btnTotal.textContent = '🧮 Copier le total des composants';
-    btnTotal.title = 'Additionner tous les composants nécessaires pour tout crafter';
+    btnTotal.textContent = msg('btnCopyTotalReagents', '🧮 Copy total reagents');
+    btnTotal.title = msg('tipCopyTotalReagents', 'Sum all reagents needed to craft everything');
     btnTotal.addEventListener('click', async e => {
       e.preventDefault();
-      btnTotal.textContent = '⏳ Chargement…';
+      btnTotal.textContent = msg('loading', '⏳ Loading…');
       btnTotal.disabled = true;
 
       const aggregated = collectAllReagents(table);
@@ -304,10 +310,10 @@
       // Sort by quantity descending
       resolved.sort((a, b) => b.qty - a.qty);
 
-      const text = '=== Total des composants ===\n' +
+      const text = msg('totalHeader', '=== Total reagents ===') + '\n' +
         resolved.map(r => `${r.qty}x ${r.name}`).join('\n');
 
-      btnTotal.textContent = '🧮 Copier le total des composants';
+      btnTotal.textContent = msg('btnCopyTotalReagents', '🧮 Copy total reagents');
       btnTotal.disabled = false;
       copy(text, btnTotal);
     });

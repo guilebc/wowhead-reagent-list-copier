@@ -1,0 +1,38 @@
+{
+  "extName": {
+    "message": "WoWHead Copier"
+  },
+  "extDescription": {
+    "message": "Copiez facilement les noms d'objets, listes de composants et listes de courses depuis les tableaux de craft de WoWHead.com."
+  },
+  "toastCopied": {
+    "message": "✓ Copié !"
+  },
+  "tipCopyName": {
+    "message": "Copier le nom"
+  },
+  "tipCopyNameAndReagents": {
+    "message": "Copier nom + composants"
+  },
+  "tipCopyReagents": {
+    "message": "Copier les composants"
+  },
+  "btnCopyFullList": {
+    "message": "📋 Copier toute la liste"
+  },
+  "tipCopyFullList": {
+    "message": "Copier tous les objets avec leurs composants"
+  },
+  "btnCopyTotalReagents": {
+    "message": "🧮 Copier le total des composants"
+  },
+  "tipCopyTotalReagents": {
+    "message": "Additionner tous les composants nécessaires pour tout crafter"
+  },
+  "loading": {
+    "message": "⏳ Chargement…"
+  },
+  "totalHeader": {
+    "message": "=== Total des composants ==="
+  }
+}

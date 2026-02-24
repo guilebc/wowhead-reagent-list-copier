@@ -1,0 +1,38 @@
+{
+  "extName": {
+    "message": "WoWHead Copier"
+  },
+  "extDescription": {
+    "message": "从WoWHead.com的制造表格中轻松复制物品名称、材料列表和购物清单。"
+  },
+  "toastCopied": {
+    "message": "✓ 已复制！"
+  },
+  "tipCopyName": {
+    "message": "复制名称"
+  },
+  "tipCopyNameAndReagents": {
+    "message": "复制名称+材料"
+  },
+  "tipCopyReagents": {
+    "message": "复制材料"
+  },
+  "btnCopyFullList": {
+    "message": "📋 复制完整列表"
+  },
+  "tipCopyFullList": {
+    "message": "复制所有物品及其材料"
+  },
+  "btnCopyTotalReagents": {
+    "message": "🧮 复制材料合计"
+  },
+  "tipCopyTotalReagents": {
+    "message": "汇总制作所有物品所需的全部材料"
+  },
+  "loading": {
+    "message": "⏳ 加载中…"
+  },
+  "totalHeader": {
+    "message": "=== 材料合计 ==="
+  }
+}

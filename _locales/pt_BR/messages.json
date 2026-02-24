@@ -1,0 +1,38 @@
+{
+  "extName": {
+    "message": "WoWHead Copier"
+  },
+  "extDescription": {
+    "message": "Copie facilmente nomes de itens, listas de reagentes e listas de compras das tabelas de fabricação do WoWHead.com."
+  },
+  "toastCopied": {
+    "message": "✓ Copiado!"
+  },
+  "tipCopyName": {
+    "message": "Copiar nome"
+  },
+  "tipCopyNameAndReagents": {
+    "message": "Copiar nome + reagentes"
+  },
+  "tipCopyReagents": {
+    "message": "Copiar reagentes"
+  },
+  "btnCopyFullList": {
+    "message": "📋 Copiar lista completa"
+  },
+  "tipCopyFullList": {
+    "message": "Copiar todos os itens com seus reagentes"
+  },
+  "btnCopyTotalReagents": {
+    "message": "🧮 Copiar total de reagentes"
+  },
+  "tipCopyTotalReagents": {
+    "message": "Somar todos os reagentes necessários para fabricar tudo"
+  },
+  "loading": {
+    "message": "⏳ Carregando…"
+  },
+  "totalHeader": {
+    "message": "=== Total de reagentes ==="
+  }
+}

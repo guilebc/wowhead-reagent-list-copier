@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "WoWHead Copier",
+  "name": "__MSG_extName__",
   "version": "1.0.0",
-  "description": "Copier facilement les noms d'objets et compositions depuis WoWHead.com",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"

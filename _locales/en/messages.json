@@ -1,0 +1,50 @@
+{
+  "extName": {
+    "message": "WoWHead Copier",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Easily copy item names, reagent lists and shopping lists from WoWHead.com crafting tables.",
+    "description": "Extension description"
+  },
+  "toastCopied": {
+    "message": "✓ Copied!",
+    "description": "Toast shown after copying to clipboard"
+  },
+  "tipCopyName": {
+    "message": "Copy name",
+    "description": "Tooltip for the copy item name button"
+  },
+  "tipCopyNameAndReagents": {
+    "message": "Copy name + reagents",
+    "description": "Tooltip for the copy name and reagents button"
+  },
+  "tipCopyReagents": {
+    "message": "Copy reagents",
+    "description": "Tooltip for the copy reagents only button"
+  },
+  "btnCopyFullList": {
+    "message": "📋 Copy full list",
+    "description": "Bulk button to copy all rows"
+  },
+  "tipCopyFullList": {
+    "message": "Copy all items with their reagents",
+    "description": "Tooltip for the bulk copy list button"
+  },
+  "btnCopyTotalReagents": {
+    "message": "🧮 Copy total reagents",
+    "description": "Bulk button to copy aggregated reagent totals"
+  },
+  "tipCopyTotalReagents": {
+    "message": "Sum all reagents needed to craft everything",
+    "description": "Tooltip for the total reagents button"
+  },
+  "loading": {
+    "message": "⏳ Loading…",
+    "description": "Shown while resolving item names"
+  },
+  "totalHeader": {
+    "message": "=== Total reagents ===",
+    "description": "Header in the copied total reagents text"
+  }
+}
