@@ -79,7 +79,7 @@ All buttons and labels are translated to match your browser language. Supported 
 1. **Download** this repository (clone or download ZIP)
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/wowhead-copier.git
+   git clone https://github.com/YOUR_USERNAME/wowhead-reagent-list-copier.git
    ```
 
 2. Open Chrome and navigate to:
@@ -92,7 +92,7 @@ All buttons and labels are translated to match your browser language. Supported 
 
 4. Click **"Load unpacked"** (top-left)
 
-5. Select the `wowhead-copier` folder (the one containing `manifest.json`)
+5. Select the `wowhead-reagent-list-copier` folder (the one containing `manifest.json`)
 
 6. Done! Navigate to any WoWHead item page with a crafting table and the buttons will appear.
 
@@ -107,7 +107,7 @@ All buttons and labels are translated to match your browser language. Supported 
 ## File structure
 
 ```
-wowhead-copier/
+wowhead-reagent-list-copier/
 ├── manifest.json        # Extension manifest (permissions, content scripts, i18n)
 ├── content.js           # Main logic (DOM parsing, XML API, copy buttons)
 ├── styles.css           # Button and toast notification styles
